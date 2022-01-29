@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tabcss.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Galada' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link
+rel="stylesheet"
+href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+</head>
+<body>
+   <nav class="navbar">
+        <div class="logo">
+            <h1>Travel</h1>
+        </div>         
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#home">Home</a></li>
+            <li class="nav-item"><a href="#destinations">Destinations</a></li>
+            <li class="nav-item"><a href="#offers">Offers</a></li>
+            <li class="nav-item"><a href="#">Sign in<i class="fa fa-user" aria-hidden="true"></i></a></li>
+        </ul>
+        <div class="mobile-view">
+            <ul class="mobile-tab">
+                <li><a href="#home"><i class='fa fa-home'></i></a></li>
+                <li><a href="#destinations"><i class="fa fa-map-o" aria-hidden="true"></i></a></li>
+                <li ><a href="#offers"><i class="fa fa-ticket" aria-hidden="true"></i> </a></li>
+                <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+     
+    </nav>
+    <script type="text/javascript">
+          window.addEventListener("scroll",function(){
+            var nav =document.querySelector("nav");
+            nav.classList.toggle("sticky",window.scrollY>50);        })
+    </script>
+
+    <div id="home" class="home">     
+        <div class="headline">
+          <h1>Explore Your Amazing Place</h1>
+          <p id="text">Find great places to stay, eat or visit from local experts</p>
+       
+          <section class="search">
+            <input type="text" name="destination" id="destination" placeholder="Search Your Destination">
+            <input type="button" value="Explore" class="search-btn" name="search-btn">    
+           </section>
+          </div>
+        
+  <div class="slideshow">
+  
+      <div class="mySlides fade">
+        <img src="images/daytour.jpg">
+        <div class="numbertext"><h1>Day Tour</h1></div>
+        
+      </div>
+      
+      <div class="mySlides fade" >
+          <img src="images/resorts.jpg" >
+        <div class="numbertext"><h1>Resort</h1></div>
+      </div>
+      
+      <div class="mySlides fade" >
+          <img src="images/beach.jpg">
+        <div class="numbertext"><h1>Beaches</h1></div>
+       
+      </div>
+      
+      <div class="mySlides fade">
+          <img src="images/trek.jpg">
+        <div class="numbertext"><h1>Trekking</h1></div>
+      </div>  
+      <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>
+        </div>             
+  </div>
+  <div class="scrolldown"><a href="#about"><img src="images/mouse.png"></a></div>
+  
+  </div>
+  <script>
+          var slideIndex = 0;
+          showSlides();
+          
+          function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+              
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 4000); 
+          }
+    </script>
+
+    <!---------                     ABOUT SECTION              --------------------->
+    <div id="about" class="about" >
+      <div >
+        <h1  >This is Our Story</h1>
+        <p>Easy discovery & booking platform for Unique stays & Exciting things to do across India at low prices with best service</p>
+        <p id="about-story">  
+From 2012 to 2017, Our leadership team worked with many corporates, colleges, schools and institutions to organise adventure group trips and in these 6 years we understood HOTELS are old and unconventional and people are looking for more experimental places to spend their vacations but hard to discover.
+After intensive ground work for more than 2 years, we discovered a lot of Camping Sites, Igloos, Homestays, Cottages exist at most uncrowded and virgin destinations , which can't be discovered if you have never been there. We thought to make these stays available by making it more organised keeping in mind amenities, safety and cleanliness.
+And Voila! Travel took Birth after nurturing it for more than 2 years.
+        </p><h2>Things we offer to our Customers</h2>
+         <div class="features">
+           <div class="card">
+             <img src="images/f1.png">
+             <div class="info">
+              <h1>Unique Stays</h1>
+              <ul>
+                <li>Camping</li>
+                <li>Cottages</li>
+                <li>Igloo</pli>
+                <li>Homestays</li>
+                <li>Entire House</li>
+                <li>Houseboat Treehouse</li>
+              </ul> 
+             </div>
+            
+           </div>
+           <div class="card">
+            <img src="images/f2.png">
+            <div class="info">
+              <h1>Things to do</h1>
+              <ul>
+                <li>Adventure Sports</li>
+                <li>Trekking</li>
+                <li>Day Trips</pli>
+                <li>Nightlife Events</li>
+                <li>Transfers and rentals</li>
+              </ul> 
+             </div>
+          </div>
+         </div>
+         </div>
+        </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+     AOS.init({
+        offset: 400, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 1000 // values from 0 to 3000, with step 50ms
+      });
+    </script>     
+     <script>let tabHeader = document.getElementsByClassName("nav-menu")[0];
+      let tabIndicator = document.getElementsByClassName("tab-indicator")[0];
+      let tabBody = document.getElementsByClassName("tab-body")[0];
+       
+      let tabsPane = tabHeader.getElementsByTagName("li");
+       
+      for(let i=0;i<tabsPane.length;i++){
+        tabsPane[i].addEventListener("click",function(){
+          tabHeader.getElementsByClassName("active")[0].classList.remove("active");
+          tabsPane[i].classList.add("active");
+          tabBody.getElementsByClassName("active")[0].classList.remove("active");
+          tabBody.getElementsByTagName("div")[i].classList.add("active");
+          
+          tabIndicator.style.left = `calc(calc(100% / 4) * ${i})`;
+        });
+      }</script>       
+    <div class="destinations" id="destinations">
+          <h1>Popular Stays in India</h1>
+          <p id="d">Explore our recommended Unique Stays in India to experience</p>
+          <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+               <div class="swipe-card">
+                 <video autoplay muted loop id="vdo">
+                   <source src="images/v1.mp4" type="video/mp4">
+                 </video>
+                   <div class="info">
+                   <h4>Nearby Jibhi Waterfall Camp</h4>
+                   <p id="location"><i id="map" class="fa fa-map-marker"></i>Jibhi, Himachal Pradesh</p>
+                   <p id="price">Starting from 1500/-</p>
+                   <button class="book-btn" name="book-now">BOOK NOW</button>
+                  </div>
+               </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swipe-card">
+                  <video autoplay muted loop id="vdo">
+                    <source src="images/v1.mp4" type="video/mp4">
+                  </video>
+                     <div class="info">
+                      <h4>Nearby Jibhi Waterfall Camp</h4>
+                      <p id="location"><i id="map" class="fa fa-map-marker"></i>Jibhi, Himachal Pradesh</p>
+                      <p id="price">Starting from 1500/-</p>
+                      <button class="book-btn" name="book-now">BOOK NOW</button>
+               
+                    </div>
+                 </div></div>
+              <div class="swiper-slide">
+                <div class="swipe-card">
+                  <video autoplay muted loop id="vdo">
+                    <source src="images/v1.mp4" type="video/mp4">
+                  </video>
+                     <div class="info">
+                      <h4>Nearby Jibhi Waterfall Camp</h4>
+                   <p id="location"><i id="map" class="fa fa-map-marker"></i>Jibhi, Himachal Pradesh</p>
+                   <p id="price">Starting from 1500/-</p>
+                   <button class="book-btn" name="book-now">BOOK NOW</button>
+               
+                    </div>
+                 </div></div>
+              <div class="swiper-slide">
+                <div class="swipe-card">
+                  <video autoplay muted loop id="vdo">
+                    <source src="images/v1.mp4" type="video/mp4">
+                  </video>
+                     <div class="info">
+                      <h4>Nearby Jibhi Waterfall Camp</h4>
+                      <p id="location"><i id="map" class="fa fa-map-marker"></i>Jibhi, Himachal Pradesh</p>
+                      <p id="price">Starting from 1500/-</p>
+                      <button class="book-btn" name="book-now">BOOK NOW</button>
+               
+                    </div>
+                 </div></div>
+              <div class="swiper-slide">
+                <div class="swipe-card">
+                  <video autoplay muted loop id="vdo">
+                    <source src="images/v1.mp4" type="video/mp4">
+                  </video>
+                     <div class="info">
+                      <h4>Nearby Jibhi Waterfall Camp</h4>
+                      <p id="location"><i id="map" class="fa fa-map-marker"></i>Jibhi, Himachal Pradesh</p>
+                      <p id="price">Starting from 1500/-</p>
+                      <button class="book-btn" name="book-now">BOOK NOW</button>
+               
+                    </div>
+                 </div></div>
+              <div class="swiper-slide">
+                <div class="swipe-card">
+                  <video autoplay muted loop id="vdo">
+                    <source src="images/v1.mp4" type="video/mp4">
+                  </video>
+                     <div class="info">
+                      <h4>Nearby Jibhi Waterfall Camp</h4>
+                      <p id="location"><i id="map" class="fa fa-map-marker"></i>Jibhi, Himachal Pradesh</p>
+                      <p id="price">Starting from 1500/-</p>
+                      <button class="book-btn" name="book-now">BOOK NOW</button>
+               
+                    </div>
+                 </div></div>
+             
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          </div>
+      
+         
+          <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      
+        
+          <script>
+            var swiper = new Swiper(".mySwiper", {
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            });
+          </script>
+
+          <div class="offers" id="offers">
+            <h1>Exclusive Deals</h1>
+            <p id="o">Checkout for the best discounts and deals here</p>
+            <div class="o-card">
+              <div class="offer">
+                <h4>Get Upto 5% Cashback when you complete an experience</h4>
+                <p id="coupon"><i id="c-icon" class="fa fa-ticket"></i>Coupon Code: 2EFDFD</p>
+             </div>
+            <div class="offer">
+                <h4>Book any Experience and Get 30% off + 20% Off</h4>
+                <p id="coupon"><i id="c-icon" class="fa fa-ticket"></i>Coupon Code: A2FDFD</p>
+         
+                 </div>
+            </div>
+           
+          </div>
+        <footer class="footer">
+            <div class="f1">
+              <h3>Travel</h3>
+              <p id="tr">Travel is an online discovery platform for unique stays and exciting things to do across india.</p>
+              <p id="copyright">Copyrights &#169 2021 Travel Pvt. Ltd | All rights reserved.</p>
+            </div>
+           <div class="f2">
+              <h3>Stay Connected With Us</h3>
+              <i id="s-icon" class="fa fa-facebook-square"></i>
+              <i id="s-icon" class="fa fa-twitter-square"></i>
+              <i  id="s-icon" class="fa fa-linkedin-square"></i>
+              <i  id="s-icon" class="fa fa-instagram"></i>
+              <h3>Address</h3>
+              <p id="addr">
+                Corporate Office :
+                Doon House, B-275(A),First floor Sector-57,Shushant Lok 3 Near Hong Kong Bazzar,Gurugram Pin 122001, Haryana.
+               <br> <i  id="s-icon" class="fa fa-phone"></i>+91-9122588799</p>
+            </div>
+            <div class="f3">
+              <h3>Discuss Your Queries with us</h3>
+                  <input type="text" name="email" id="email" placeholder="Email Address">
+                  <textarea name="query" id="query" cols="30" rows="10" placeholder="Any Query.."></textarea>
+                  <button class="query-btn" name="send">SEND</button>
+              
+                </div>
+                
+          </footer>
+</body>
+
+   </html>
+
+  
+  
+   
+ 
